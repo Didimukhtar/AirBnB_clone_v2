@@ -11,21 +11,41 @@ fi
 SERVER_CONFIG="server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
 	server_name _;
 	index index.html index.htm;
 	error_page 404 /404.html;
 	add_header X-Served-By \$hostname;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
 	location / {
 		root /var/www/html/;
 		try_files \$uri \$uri/ =404;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
 	location /hbnb_static/ {
 		alias /data/web_static/current/;
 		try_files \$uri \$uri/ =404;
 	}
+<<<<<<< HEAD
 	if (\$request_filename ~ redirect_me) {
 		rewrite ^ https://sketchfab.com/bluepeno/models permanent;
 	}
+=======
+
+	if (\$request_filename ~ redirect_me) {
+		rewrite ^ https://sketchfab.com/bluepeno/models permanent;
+	}
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
 	location = /404.html {
 		root /var/www/error/;
 		internal;

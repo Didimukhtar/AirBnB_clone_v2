@@ -15,12 +15,20 @@ env.user = "ubuntu"
 
 def do_pack():
     """ generates a .tgz archive from the contents of the web_static
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     All files in the folder web_static must be added to the final archive.
     All archives must be stored in the folder versions.
     The name of the archive created must be:
         web_static_<year><month><day><hour><minute><second>.tgz
     The function do_pack must return the archive path if the archive has
     been correctly generated. Otherwise, it should return None.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     Returns:
         fabric.operations._AttributeString: archive path.
     """
@@ -40,8 +48,15 @@ def do_pack():
 
 def do_deploy(archive_path):
     """distributes an archive to your web servers.
+<<<<<<< HEAD
     Args:
         archive_path (string): path to archive
+=======
+
+    Args:
+        archive_path (string): path to archive
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     Returns:
         Boolean: whether the archive is distributed or not
     """

@@ -15,10 +15,18 @@ env.user = "ubuntu"
 
 def deploy():
     """creates and distributes an archive to your web servers
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     All remote commands must be executed on both of web your servers (using
     env.hosts = ['<IP web-01>', 'IP web-02'] variable in your script).
     You must use this script to deploy it on your servers: xx-web-01 and
     xx-web-02.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     Returns:
         _type_: value of do_deploy
     """
@@ -29,6 +37,7 @@ def deploy():
         return False
 
     # Call do_deploy function, using the new path of the new archive and
+<<<<<<< HEAD
     # return ing web_static to {}".format(output))
         # extract the contents of a tar archive
         local("tar -cvzf {} web_static".format(output))
@@ -125,17 +134,28 @@ def do_clean(number=0):
         .format(path, path, start + 1)
     ]
     run(''.join(cmd_parts))the return value of do_deploy
+=======
+    # return the return value of do_deploy
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     return do_deploy(archive_path)
 
 
 def do_pack():
     """ generates a .tgz archive from the contents of the web_static
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     All files in the folder web_static must be added to the final archive.
     All archives must be stored in the folder versions.
     The name of the archive created must be:
         web_static_<year><month><day><hour><minute><second>.tgz
     The function do_pack must return the archive path if the archive has
     been correctly generated. Otherwise, it should return None.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     Returns:
         fabric.operations._AttributeString: archive path.
     """
@@ -163,8 +183,15 @@ def do_pack():
 
 def do_deploy(archive_path):
     """distributes an archive to your web servers.
+<<<<<<< HEAD
     Args:
         archive_path (string): path to archive
+=======
+
+    Args:
+        archive_path (string): path to archive
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     Returns:
         Boolean: whether the archive is distributed or not
     """
@@ -216,6 +243,10 @@ def do_deploy(archive_path):
 
 def do_clean(number=0):
     """deletes out-of-date archives
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     If number is 0 or 1, keep only the most recent version of your archive.
     if number is 2, keep the most recent, and second most recent versions of
     your archive.
@@ -223,6 +254,10 @@ def do_clean(number=0):
     in the versions folder.
     Delete all unnecessary archives (all archives minus the number to keep)
     in the /data/web_static/releases folder of both of your web servers.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
     Args:
         number (int, optional): number of the archives, including the most
         recent, to keep. Defaults to 0.
@@ -247,3 +282,7 @@ def do_clean(number=0):
         .format(path, path, start + 1)
     ]
     run(''.join(cmd_parts))
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 5f7e2dbb3324f0087bc8e31582ac99e33d5afcc8
